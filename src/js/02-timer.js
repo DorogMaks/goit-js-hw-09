@@ -52,7 +52,6 @@ function onBtnStartClick() {
     refs.btnStart.disabled = true;
 
     let countdown = new Date(refs.inputDate.value) - new Date();
-
     let time = convertMs(countdown);
 
     if (countdown >= 0) {
@@ -62,7 +61,6 @@ function onBtnStartClick() {
       refs.seconds.textContent = addLeadingZero(time.seconds);
     } else {
       clearInterval(timer);
-
       Notiflix.Notify.success('Countdown finished');
     }
   }, 1000);
