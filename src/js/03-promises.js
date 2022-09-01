@@ -1,6 +1,7 @@
 import Notiflix from 'notiflix';
 
 const refs = {
+  formEl: document.querySelector('.form'),
   inputEl: document.querySelector('input'),
   inputDelay: document.querySelector('input[name="delay"]'),
   inputStep: document.querySelector('input[name="step"]'),
@@ -48,5 +49,9 @@ function onBtnCreatePromisesClick(evt) {
           `❌ Rejected promise ${position} in ${delay}ms`
         );
       });
+  }
+
+  if (refs.inputDelay.value && refs.inputStep.value && refs.inputAmount.value) {
+    refs.formEl.reset();
   }
 }

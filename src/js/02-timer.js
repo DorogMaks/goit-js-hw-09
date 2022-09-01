@@ -48,9 +48,9 @@ function addLeadingZero(value) {
 }
 
 function onBtnStartClick() {
-  let timer = setInterval(() => {
-    refs.btnStart.disabled = true;
+  refs.btnStart.disabled = true;
 
+  let timer = setInterval(() => {
     let countdown = new Date(refs.inputDate.value) - new Date();
     let time = convertMs(countdown);
 
